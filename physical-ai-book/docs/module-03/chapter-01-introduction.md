@@ -256,39 +256,54 @@ Before moving to Chapter 2, test your knowledge:
 ### Quiz Questions
 
 1. **What are the three main components of the NVIDIA Isaac ecosystem?**
-   - **Answer**
-     
-     Isaac Sim (simulation), Isaac ROS (GPU perception), Nav2 (navigation)
+   <details>
+
+   <summary>Answer</summary>
+
+   Isaac Sim (simulation), Isaac ROS (GPU perception), Nav2 (navigation)
+
+   </details>
 
 2. **Why is GPU acceleration important for robotics?**
    <details>
+
    <summary>Answer</summary>
-   
+
    GPUs process sensor data 10x faster than CPUs, enabling real-time perception at 30+ Hz needed for dynamic robot movement.
-   
+
    </details>
+
 3. **Trace the data flow: A robot receives a navigation goal. What happens?**
-   - **Answer**
-     
-     
-     1. Nav2 plans path using map
-     2. Nav2 publishes velocity commands (/cmd_vel)
-     3. Isaac Sim moves robot
-     4. Isaac Sim publishes sensor data (camera, IMU)
-     5. Isaac ROS processes sensors and updates pose
-     6. Cycle repeats until goal reached
+   <details>
 
+   <summary>Answer</summary>
 
+   1. Nav2 plans path using map
+   2. Nav2 publishes velocity commands (/cmd_vel)
+   3. Isaac Sim moves robot
+   4. Isaac Sim publishes sensor data (camera, IMU)
+   5. Isaac ROS processes sensors and updates pose
+   6. Cycle repeats until goal reached
+
+   </details>
 
 4. **What does cuVSLAM stand for and what does it do?**
-   - **Answer**
-     
-     CUDA Visual SLAM - GPU-accelerated algorithm that tracks robot position and builds a map using camera and IMU data.
+   <details>
+
+   <summary>Answer</summary>
+
+   CUDA Visual SLAM - GPU-accelerated algorithm that tracks robot position and builds a map using camera and IMU data.
+
+   </details>
 
 5. **How is Isaac Sim different from Gazebo?**
-   - **Answer**
-     
-     Isaac Sim provides photorealistic rendering (for realistic vision), GPU-accelerated physics, built-in synthetic data generation, and tighter integration with NVIDIA's perception stack.
+   <details>
+
+   <summary>Answer</summary>
+
+   Isaac Sim provides photorealistic rendering (for realistic vision), GPU-accelerated physics, built-in synthetic data generation, and tighter integration with NVIDIA's perception stack.
+
+   </details>
 
 ### Concept Check
 
