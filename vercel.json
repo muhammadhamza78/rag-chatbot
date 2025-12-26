@@ -1,27 +1,7 @@
 {
-  "version": 2,
-  "name": "rag-chatbot",
-  "builds": [
-    {
-      "src": "physical-ai-book/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "physical-ai-book/build"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
-  "buildCommand": "cd physical-ai-book && npm install && npm run build",
-  "outputDirectory": "physical-ai-book/build",
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "installCommand": "npm install",
   "framework": "docusaurus",
-  "installCommand": "cd physical-ai-book && npm install"
+  "devCommand": "npm start"
 }
