@@ -1,0 +1,18 @@
+﻿from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+# Enable CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3001"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.post("/query")
+async def query(data: dict):
+    question = data.get("question", "")
+    return {"answer": f"You asked: {question}"}
